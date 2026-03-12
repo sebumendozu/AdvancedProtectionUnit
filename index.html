@@ -1,7 +1,279 @@
-<html>
+<!DOCTYPE html>
+<html lang="de">
 <head>
-<title>Grand-web</title>
+<meta charset="UTF-8">
+<title>LSPD Bewerbung – Grand RP</title>
+
+<style>
+    /* Hintergrund mit Naturbild + Blur */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1920&q=80") no-repeat center center fixed;
+        background-size: cover;
+        color: #e6e6e6;
+        display: flex;
+        justify-content: center;
+        padding: 40px 0;
+        cursor: none;
+        position: relative;
+    }
+
+    /* Blur Overlay */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(12px) brightness(0.45);
+        z-index: -1;
+    }
+
+    /* Neon Cursor */
+    .neon-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 153, 255, 0.15);
+        border: 2px solid #009dff;
+        box-shadow: 0 0 15px #009dff, 0 0 30px #009dff;
+        transition: transform 0.08s linear;
+        z-index: 9999;
+    }
+
+    /* Container */
+    .container {
+        width: 65%;
+        background: rgba(30, 30, 30, 0.85);
+        padding: 40px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 0 25px rgba(0, 140, 255, 0.4);
+        border: 1px solid rgba(0, 140, 255, 0.4);
+        backdrop-filter: blur(6px);
+        animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Neon Linie */
+    .neon-line {
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #009dff, transparent);
+        margin: 25px 0;
+        box-shadow: 0 0 10px #009dff;
+    }
+
+    /* LSPD Stern */
+    .lspd-star {
+        width: 180px;
+        filter: drop-shadow(0 0 12px #009dff);
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        color: #4aa3ff;
+        text-shadow: 0 0 10px #0077cc;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        color: #4aa3ff;
+        margin-top: 35px;
+        text-shadow: 0 0 8px #006bb3;
+    }
+
+    p, li {
+        line-height: 1.7;
+        font-size: 17px;
+    }
+
+    .info-box {
+        background: rgba(50, 50, 50, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        text-align: left;
+        border-left: 4px solid #009dff;
+        box-shadow: 0 0 10px rgba(0, 140, 255, 0.3);
+    }
+
+    .info-box strong {
+        color: #4aa3ff;
+    }
+
+    ul {
+        text-align: left;
+        margin-left: 20%;
+    }
+
+    .rank-list {
+        background: rgba(50, 50, 50, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        text-align: left;
+        border-left: 4px solid #009dff;
+        box-shadow: 0 0 10px rgba(0, 140, 255, 0.3);
+    }
+
+    .footer {
+        margin-top: 30px;
+        font-style: italic;
+        color: #b5b5b5;
+    }
+
+    /* Forum Button */
+    .forum-button {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 14px 28px;
+        background: rgba(0, 157, 255, 0.2);
+        border: 2px solid #009dff;
+        border-radius: 10px;
+        color: #4aa3ff;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 0 12px #009dff;
+        transition: 0.25s ease;
+    }
+
+    .forum-button:hover {
+        background: rgba(0, 157, 255, 0.35);
+        box-shadow: 0 0 18px #33b5ff, 0 0 30px #009dff;
+        transform: scale(1.05);
+    }
+</style>
 </head>
 
 <body>
-<h1>Überschrift</h1>
+
+<!-- Neon Cursor -->
+<div class="neon-cursor" id="cursor"></div>
+
+<div class="container">
+
+    <div class="neon-line"></div>
+
+    <img class="lspd-star" src="https://aa93a10d15.cbaul-cdnwnd.com/f471442beed9e770ff5094ddbdec5dfe/200000056-5b8a25b8a4/Screenshot_797-removebg-preview-8.png?ph=aa93a10d15" alt="LSPD Stern">
+
+    <h1>Bewerbung zum Leader - Los Santos Police Department</h1>
+
+    <div class="neon-line"></div>
+
+    <div class="info-box">
+        <p><strong>Name:</strong> Daniel Shadow</p>
+        <p><strong>Visum:</strong> 22</p>
+        <p><strong>Discordname:</strong> daniel_kch</p>
+        <p><strong>Bürger-ID:</strong> 166023</p>
+    </div>
+
+    <h2>Motivation</h2>
+    <p>
+        Seit meiner Ankunft in Los Santos ist es mein Ziel, aktiv zur Sicherheit der Stadt beizutragen.
+        Das LSPD steht für Ordnung, Professionalität und Gerechtigkeit – Werte, die ich teile und unterstützen möchte.
+    </p>
+
+    <h2>Stärken</h2>
+    <ul>
+        <li>Teamfähigkeit & klare Kommunikation</li>
+        <li>Disziplin & Verantwortungsbewusstsein</li>
+        <li>Ruhiges Verhalten in Stresssituationen</li>
+        <li>Schnelle Auffassungsgabe & Lernbereitschaft</li>
+    </ul>
+
+    <h2>Erfahrung</h2>
+    <p>
+        Ich verfüge über Erfahrung im Umgang mit Bürgern, Konfliktsituationen und strukturiertem Arbeiten.
+        Zudem kenne ich die RP‑Regeln und lege großen Wert auf professionelles Verhalten.
+    </p>
+
+    <h2>Rangstruktur des LSPD (30 Ränge)</h2>
+
+    <div class="rank-list">
+        <ol>
+            <li>Cadet</li>
+            <li>Officer I</li>
+            <li>Officer II</li>
+            <li>Officer III</li>
+            <li>Senior Lead Officer</li>
+            <li>Sergeant I</li>
+            <li>Sergeant II</li>
+            <li>Detective I</li>
+            <li>Detective II</li>
+            <li>Detective III</li>
+            <li>Lieutenant I</li>
+            <li>Lieutenant II</li>
+            <li>Captain I</li>
+            <li>Captain II</li>
+            <li>Captain III</li>
+            <li>Commander</li>
+            <li>Assistant Chief</li>
+            <li>Deputy Chief</li>
+            <li>Chief of Police</li>
+            <li>Special Operations Officer</li>
+            <li>SWAT Operator</li>
+            <li>SWAT Senior Operator</li>
+            <li>SWAT Lieutenant</li>
+            <li>SWAT Captain</li>
+            <li>Training Officer</li>
+            <li>Senior Training Officer</li>
+            <li>Internal Affairs Agent</li>
+            <li>Internal Affairs Senior Agent</li>
+            <li>Division Leader</li>
+            <li>High Command</li>
+        </ol>
+    </div>
+
+    <h2>Schlusswort</h2>
+    <p>
+        Ich würde mich sehr freuen, Teil des LSPD zu werden und gemeinsam mit Ihnen für ein sicheres Los Santos zu sorgen.
+        Vielen Dank für die Prüfung meiner Bewerbung.
+    </p>
+
+    <p class="footer">
+        Mit freundlichen Grüßen<br>
+        <b>Daniel Shadow</b>
+    </p>
+
+    <div class="neon-line"></div>
+
+    <!-- Forum Button -->
+    <a href="https://gta5grand.com/forum/de/" target="_blank" class="forum-button">
+        Zum Grand RP Forum
+    </a>
+
+</div>
+
+<script>
+    const cursor = document.getElementById("cursor");
+
+    document.addEventListener("mousemove", (e) => {
+        cursor.style.top = e.clientY + "px";
+        cursor.style.left = e.clientX + "px";
+    });
+
+    document.addEventListener("mousedown", () => {
+        cursor.style.transform = "translate(-50%, -50%) scale(0.7)";
+    });
+
+    document.addEventListener("mouseup", () => {
+        cursor.style.transform = "translate(-50%, -50%) scale(1)";
+    });
+</script>
+
+</body>
+</html>
